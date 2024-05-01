@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: estate
-          image: mjlee39/woorizip:0.0.2
+          image: mjlee39/woorizip:0.1.2
           ports:
             - containerPort: 9092
 ---
