@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: estate
-          image: mjlee39/woorizip:0.1.2
+          image: 211125685751.dkr.ecr.ap-northeast-2.amazonaws.com/woorizip-estate:20240501112225
           ports:
             - containerPort: 9092
 ---
