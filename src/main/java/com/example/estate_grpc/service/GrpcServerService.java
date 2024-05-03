@@ -70,7 +70,10 @@ public class GrpcServerService extends EstateProtoServiceGrpc.EstateProtoService
     }
 
 
+
+
     //estateid로 estate 조회
+    @Override
     public void findEstateInfo(EstateIdRequest request, StreamObserver<EstateInfoResponse> responseObserver){
         String estateId = request.getEstateId();
 
@@ -100,6 +103,7 @@ public class GrpcServerService extends EstateProtoServiceGrpc.EstateProtoService
     }
 
     //모든 estate 조회
+    @Override
     public void getEstateAll(EstateAllRequest estateAllRequest, StreamObserver<EstateAllResponse> responseStreamObserver){
         List<Estate> estateEntitys = estateRepository.findAll();
         List<EstateDTO> estateDTOS = Arrays.asList(mapper.map(estateEntitys, EstateDTO[].class));
@@ -192,6 +196,7 @@ public class GrpcServerService extends EstateProtoServiceGrpc.EstateProtoService
     }
 
     //집 정보 update
+    @Override
     @Transactional
     public void updateEstate(EstateUpdateRequest request, StreamObserver<EstateUpdateResponse> responseStreamObserver){
         EstateUpdateDTO estateUpdateDTO = new EstateUpdateDTO();
@@ -255,6 +260,7 @@ public class GrpcServerService extends EstateProtoServiceGrpc.EstateProtoService
     }
 
     //estate 삭제
+    @Override
     @Transactional
     public void deleteEstate(EstateDeleteRequest request, StreamObserver<EstateDeleteResponse> responseStreamObserver){
         String id = request.getEstateId();
