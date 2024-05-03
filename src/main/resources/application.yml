@@ -5,7 +5,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://testaws.teamwaf.app:3306/teamwafdb?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://woorizip-database.c56y0ki2ky4c.ap-northeast-2.rds.amazonaws.com:3306/teamwafdb?serverTimezone=Asia/Seoul
     #url: jdbc:mysql://mysqlcommdb:3306/fisa?useSSL=false&allowPublicKeyRetrieval=true
     #url: jdbc:mysql://127.0.0.1:3306/fisa?useSSL=false&allowPublicKeyRetrieval=true
     #url: jdbc:mysql://db17.cfaa2gyks0rb.ap-northeast-2.rds.amazonaws.com:3306/fisa?useSSL=false&allowPublicKeyRetrieval=true
