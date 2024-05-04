@@ -5,15 +5,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: estateapp
+      app: estate
   replicas: 1
   template:
     metadata:
       labels:
-        app: estateapp
+        app: estate
     spec:
       containers:
-        - name: estate
+        - name: estateapp
           image: 211125685751.dkr.ecr.ap-northeast-2.amazonaws.com/woorizip-estate:20240503061911
           ports:
             - containerPort: 9092
@@ -24,7 +24,7 @@ metadata:
   name: service-estate
 spec:
   selector:
-    app: estateapp
+    app: estate
   ports:
     - protocol: TCP
       port: 80
